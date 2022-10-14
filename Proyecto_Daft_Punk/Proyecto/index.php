@@ -1,0 +1,96 @@
+<?php
+$titulo_pagina = 'Daft Punk official site';
+require_once 'config.php';
+require_once 'components/navbar.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daft Punk official site</title>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="shortcut icon" href="assets/img/descarga.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">We are Daft Punk</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Official Site Of Daft Punk</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Principal page</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Links</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Sesion</a></li>
+                    <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
+                    <li>
+                    <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                </ul>
+                </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+        &nbsp; &nbsp; &nbsp;
+
+    </div>
+    <ul class="nav flex-column text-center align-middle position-absolute bottom-50 end-50">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-compact-disc"></i> Musica</a>
+        </li>
+        <li class="nav-item img-fluid">
+        <a class="nav-link" href="#"> Historia</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Diseños</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Streaming</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Redes</a>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Fans Club
+            <button onclick="location.href='https://localhost/Pagina_Web_Daft_Punk/Proyecto_Daft_Punk/Proyecto/registro.php'"></button>
+            </a>
+        </li>
+        </li>
+    </ul>
+</body>
+</html>
+</body>
+</html>
+
+<?php
+require_once 'components/footer.php';
+?>
