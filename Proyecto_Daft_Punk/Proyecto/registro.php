@@ -1,19 +1,10 @@
 <?php
 require_once 'config.php';
 require_once 'components/navbar.php';
-$servidor = "localhost";
-$usuario = "root";
-$clave="";
-$nombre_bd = "daft_punk"
-
-$conexion = mysqli_connect ($servidor, $usuario, $clave, $nombre_bd);
-
-if(!$conexion){
-    die("Conexión fallo:". mysqli_connect_error());
-}
+require_once 'admin/continentes/includes/conexion.php';
 
 $query_sql_continentes = "SELECT * FROM tb_paises";
-$resultado_continentes = mysqli_query($conexion,$query_sql);
+$resultado_continentes = mysqli_query($conexion, $query_sql_continentes);
 ?>
 
 
@@ -50,6 +41,13 @@ $resultado_continentes = mysqli_query($conexion,$query_sql);
             <div class="form-floating">
                 <select class="form-select" id="selectContinenteRegistro" name="selectContinenteRegistro">
                     <option selected disabled value="">Seleccione un Continente</option>
+                    <option value ="America del Norte">America del Norte</option>
+                    <option value ="America Central">America Central</option>
+                    <option value = "America del Sur">America del Sur</option>
+                    <option value ="Europa">Europa</option>
+                    <option value = "Africa">Africa</option>
+                    <option value ="Asia">Asia</option>
+                    <option value = "Oceania">Oceania</option>
                     <?php
                     while($data = mysqli_fetch_object($resultado_continentes)){
                     ?>
@@ -58,7 +56,7 @@ $resultado_continentes = mysqli_query($conexion,$query_sql);
                     }
                     ?>
             </select>
-                <label for="selectPaisRegistro">Continente</label>
+                <label for="selectContinenteRegistro">Continente</label>
             </div>
         </div>
         <div class="col-md-6">
@@ -89,9 +87,7 @@ $resultado_continentes = mysqli_query($conexion,$query_sql);
     </form>
 </section>
 
-<img src="https://fotos.perfil.com/2021/02/22/trim/635/357/daft-punk-anuncio-su-separacion-despues-de-28-anos-1131439.jpg?webp" alt="" margin-top="35
-px" ; background-position= "inherit"  > </img>
 
 <?php
-require_once 'components/footer.php';
+require_once 'components/footers.php';
 ?>

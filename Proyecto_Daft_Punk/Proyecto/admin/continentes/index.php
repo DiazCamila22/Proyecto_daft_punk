@@ -10,25 +10,31 @@
 //    $contador++;
 //}
 
-
+if(isset($_SESSION['perfil']) && $_SESSION['perfil'] !=1){
+    header('location:' .URL_WEB);
+}
 
 require_once '../../config.php';
-    require_once '../../components/navbar.php';
+require_once '../../components/navbar.php';
+
+if(isset($_SESSION['perfil']) && $_SESSION['perfil'] !=1){
+
+require_once '../continentes/includes/conexion.php';
 
 $servidor = "localhost";
 $usuario = "root";
 $clave="";
-$nombre_bd = "daft_punk"
+$nombre_bd = "daft_punk";
 
-$conexion = mysqli_connect ($servidor, $usuario, $clave, $nombre_bd);
+$conexion = mysqli_connect($servidor, $usuario, $clave, $nombre_bd);
 
 if(!$conexion){
     die("Conexión fallo:". mysqli_connect_error());
 }
 
-$query_sql = "SELECT * FROM tb_paises";
-$resultado = mysqli_query($conexion,$query_sql);
-print_r($resultado);exit;
+$query_sql_continentes = "SELECT * FROM tb_paises";
+$resultado_continentes = mysqli_query($conexion,$query_sql_continentes);
+print_r($resultado_continentes);exit;
 
 ?>
 
@@ -51,10 +57,10 @@ print_r($resultado);exit;
         </thead>
         <tbody>
             <?php
-            while($data = mysqli_fetch_object($resultado)){
+            while($data = mysqli_fetch_object($resultado_continentes)){
             ?>
                 <tr>
-                    <th><?php echo $data ->id_registro ?> </th>
+                    <th><?php echo $data ->id_registro ?></th>
                     <td><?php echo $data ->nombre ?></td>
                     <td colspan="2"></td>
                         <button class="btn btn-warning"><i class="fa-solid fa-pencil me-3"></i> Editar</button>
@@ -94,5 +100,5 @@ print_r($resultado);exit;
 </div>
 
 <?php
-require_once '../../components/footers.php'
-?>
+require_once '../../components/footers.php';
+}

@@ -3,7 +3,9 @@
         <div class="row">
             <div class="col-4">
                 <ul class="list-group">
-                    <img src="https://es.rollingstone.com/wp-content/uploads/2022/02/15-canciones-para-recordar-a-Daft-Punk-a-un-an%CC%83o-de-su-separacion.jpg" alt="">
+                    <div style="float:left">
+                    <img src="https://www.1zoom.me/big2/675/253936-Sepik.jpg" alt="#" width="1115" height="300" href="#" class="bgimage" >
+                    </div>
                 </ul>
             </div>
             <div class="col-4">

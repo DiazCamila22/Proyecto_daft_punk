@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="es">
 
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php
-    // este fragmento es imrimir nuestro codigo con solo php
+    // este fragmento es imprimir nuestro codigo con solo php
     // if(isset($titulo_pagina)){
     //     echo "<title>$titulo_pagina</title>";
     // }else{
@@ -27,6 +31,7 @@
     <link rel="stylesheet" href="<?php echo URL_WEB ?>Proyecto/assets/css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
 
 
 
