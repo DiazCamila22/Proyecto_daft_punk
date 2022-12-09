@@ -9,7 +9,7 @@ require_once '../admin/continentes/includes/conexion.php';
     <h1 class="text-center my-5">Recuperar contraseña</h1>
     <div class="row">
         <div class="col-6 offset-3">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum animi laborum ipsa quasi maxime reprehenderit officia, vero ipsam, nemo libero alias in quisquam dolores natus deleniti voluptas molestias. Ut.</p>
+        <p>Escriba el correo registrado, para enviar las instrucciones de recuperación de contraseña</p>
             <form action="Proceso-recuperacion.php" method="post">
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" id="inputRecuperacionCorreo" name="inputRecuperacionCorreo" placeholder="name@example.com">
